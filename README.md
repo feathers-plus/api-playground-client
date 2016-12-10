@@ -1,35 +1,58 @@
 # api-playground-client
 
-[![Build Status](https://travis-ci.org/feathersjs/feathers-profiler.png?branch=master)](https://travis-ci.org/feathersjs/feathers-profiler)
-[![Code Climate](https://codeclimate.com/github/feathersjs/feathers-profiler/badges/gpa.svg)](https://codeclimate.com/github/feathersjs/feathers-profiler)
-[![Test Coverage](https://codeclimate.com/github/feathersjs/feathers-profiler/badges/coverage.svg)](https://codeclimate.com/github/feathersjs/feathers-profiler/coverage)
-[![Dependency Status](https://img.shields.io/david/feathersjs/feathers-profiler.svg?style=flat-square)](https://david-dm.org/feathersjs/feathers-profiler)
-[![Download Status](https://img.shields.io/npm/dm/feathers-profiler.svg?style=flat-square)](https://www.npmjs.com/package/feathers-profiler)
+[![Dependency Status](https://img.shields.io/david/feathersjs/api-playground-client.svg?style=flat-square)](https://david-dm.org/feathersjs/api-playground-client)
+[![Download Status](https://img.shields.io/npm/dm/api-playground-client.svg?style=flat-square)](https://www.npmjs.com/package/api-playground-client)
 
-> Log service method calls and gather profile information on them.
+> Feathers frontend client for BestBuy/api-playground
 
-## Installation
+## Install the API server
 
-```
-npm install feathers-profiler --save
-```
+You need to fork [BestBuy/api-playground](https://github.com/BestBuy/api-playground).
+Follow its instructions to start the Best Buy API server.
+Note the URL its listening to.
 
-## Example
+## Installing and starting the Feathers client
 
-```
-npm start
-```
+`npm install -g http-server` installs a HTTP server to serve the static files in this repo.
 
-## Documentation
+Fork this repo,
+[feathersjs/api-playground-client](https://github.com/feathersjs/api-playground-client),
+into its own folder.
 
-Refer to `feathers-profiler` in `Ecosystem & APIs` in
-[Feathersjs documentation](https://docs.feathersjs.com).
+Change file `serverUrl.js` to point to the API server
+if that's not located at `localhost:3030`.
 
-`feathers-profiler` is part of the `Auk` release of Feathersjs.
+`http-server` starts our static file server.
+Note the URL its listening to.
+This usually includes `localhost:8080`.
 
-![logs](./docs/profiler-log.jpg)
+Point to `localhost:8080/rest.html` to run the client version which communicates with the
+API server using HTTP protocals.
 
-![stats](./docs/profiler-stats.jpg)
+Point to `localhost:8080/socket.html` for the version which communicates using web sockets.
+
+## Running the client
+
+Select the Best Buy service you want to call.
+
+Select the call method. Methods will have some of these paramaters:
+
+- `id` The identifier for the resource.
+A resource is the data identified by a unique id.
+A string must be quoted, a number not.
+- `data` The resource data as JSON, e.g. `{ name: 'GiftIdeas' }`.
+- `query` The query selector as JSON, e.g. `{ type: 'HardGood' }`.
+
+Server responses appear in the `Results` section.
+
+You can refer to the
+[Feathers docs](https://docs.feathersjs.com/v/auk/services/readme.html)
+for more information.
+
+## Help
+
+[Help](https://docs.feathersjs.com/v/auk/help/readme.html) is available.
+You may find [Slack](https://feathersjs.slack.com/messages/help/) convenient.
 
 ## License
 

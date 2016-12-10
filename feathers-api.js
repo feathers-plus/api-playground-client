@@ -13,7 +13,7 @@ var services = {
 function makeServiceRequest(service, selectedMethod) {
   switch (selectedMethod) {
     case 'find':
-      return service.find(queryEl.value);
+      return service.find({ query: queryEl.value });
     case 'get': // fall through
     case 'remove':
       return service[selectedMethod](idEl.value);

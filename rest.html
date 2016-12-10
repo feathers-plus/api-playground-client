@@ -2,6 +2,13 @@
 <head>
   <title>Feathers rest client</title>
   <style>
+    body {
+      font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+      font-weight: 400;
+      font-size: 16px;
+      color: #333;
+    }
+
     pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
     .string { color: green; }
     .number { color: darkorange; }
@@ -37,14 +44,15 @@
 <br />
 Results:
 <br />
-<div id="results" style="overflow: auto; height: 300px; width: 75%; font-size: smaller;"></div>
+<div id="results" style="overflow: auto; height: 75%; width: 75%; font-size: smaller;"></div>
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
 <script src="//unpkg.com/feathers-client@^1.8.0/dist/feathers.js"></script>
+<script src="/serverUrl.js"></script>
 <script>
   const apiType = 'rest';
   const app = feathers()
-      .configure(feathers.rest(' http://192.168.2.111:3030').fetch(fetch))
+      .configure(feathers.rest(serverUrl).fetch(fetch))
 </script>
 <script src="/feathers-api.js"></script>
 </body>
