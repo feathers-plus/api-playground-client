@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Feathers rest client</title>
+  <style>
+    pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+    .string { color: green; }
+    .number { color: darkorange; }
+    .boolean { color: blue; }
+    .null { color: magenta; }
+    .key { color: red; }
+  </style>
+</head>
+<body>
+<div>
+  Select service:
+  <input type="radio" name="services" value="categories" checked>categories
+  <input type="radio" name="services" value="products" />products
+  <input type="radio" name="services" value="services" />services
+  <input type="radio" name="services" value="stores" />stores
+  <br />
+  Select method:
+  <input type="radio" name="methods" value="find" checked> find
+  <input type="radio" name="methods" value="get" /> get
+  <input type="radio" name="methods" value="create" /> create
+  <input type="radio" name="methods" value="update" /> update
+  <input type="radio" name="methods" value="patch" /> patch
+  <input type="radio" name="methods" value="remove" /> remove
+  <br />
+  <br />
+  <div id="id-group">id: <input type="text" id="id" placeholder="item id" style="width: 20%;" /><br /></div>
+  <div id="data-group">data: <input type="text" id="data" placeholder="JSON for data" style="width: 75%;" /><br /></div>
+  <div id="query-group">query: <input type="text" id="query" placeholder="JSON for query" style="width: 75%;" /><br /></div>
+  <br />
+
+  <input type="button" name="run" value="Send request to server">
+</div>
+<br />
+Results:
+<br />
+<div id="results" style="overflow: auto; height: 300px; width: 75%; font-size: smaller;"></div>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
+<script src="//unpkg.com/feathers-client@^1.8.0/dist/feathers.js"></script>
+<script>
+  const apiType = 'rest';
+  const app = feathers()
+      .configure(feathers.rest(' http://192.168.2.111:3030').fetch(fetch))
+</script>
+<script src="/feathers-api.js"></script>
+</body>
+</html>
