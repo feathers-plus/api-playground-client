@@ -22,12 +22,12 @@ into its own folder.
 Change file `serverUrl.js` to point to the API server
 if that's not located at `localhost:3030`.
 
-`http-server` starts our static file server.
+`cd public` and `http-server` starts our static file server wusing `to/the/repo/public` as the root.
 Note the URL its listening to.
 This usually includes `localhost:8080`.
 
 Point to `localhost:8080/rest.html` to run the client version which communicates with the
-API server using HTTP protocals.
+API server using REST HTTP protocals.
 
 Point to `localhost:8080/socket.html` for the version which communicates using web sockets.
 

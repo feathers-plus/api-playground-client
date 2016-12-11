@@ -1,1 +1,0 @@
-var serverUrl = 'localhost:3030';
