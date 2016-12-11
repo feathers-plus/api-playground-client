@@ -20,9 +20,9 @@ Fork this repo,
 into its own folder.
 
 Change file `serverUrl.js` to point to the API server
-if that's not located at `localhost:3030`.
+if that's not listening to `localhost:3030`.
 
-`cd public` and `http-server` starts our static file server wusing `to/the/repo/public` as the root.
+`cd public` and `http-server` starts our static file server using `to/the/repo/public` as root.
 Note the URL its listening to.
 This usually includes `localhost:8080`.
 
@@ -40,8 +40,8 @@ Select the call method. Methods will have some of these paramaters:
 - `id` The identifier for the resource.
 A resource is the data identified by a unique id.
 A string must be quoted, a number not.
-- `data` The resource data as JSON, e.g. `{ name: 'GiftIdeas' }`.
-- `query` The query selector as JSON, e.g. `{ type: 'HardGood' }`.
+- `data` The resource data as a JavaScript object, e.g. `{ name: 'GiftIdeas' }`.
+- `query` The query selector as a JavaScript object, e.g. `{ type: 'HardGood' }`.
 
 Server responses appear in the `Results` section.
 
@@ -52,7 +52,7 @@ for more information.
 ## Help
 
 [Help](https://docs.feathersjs.com/v/auk/help/readme.html) is available.
-You may find [Slack](https://feathersjs.slack.com/messages/help/) convenient.
+You may find [Feathersjs Slack](https://feathersjs.slack.com/messages/help/) convenient.
 
 ## License
 
