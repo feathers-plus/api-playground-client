@@ -9,7 +9,7 @@
 
 You need to fork [BestBuy/api-playground](https://github.com/BestBuy/api-playground).
 Follow its instructions to start the Best Buy API server.
-Note the URL its listening to.
+Note the URL its listening to since it will be used for the API client.
 
 ## Installing and starting the Feathers client
 
@@ -35,7 +35,7 @@ Point to `localhost:8080/socket.html` for the version which communicates using w
 
 Select the Best Buy service you want to call.
 
-Select the call method. Methods will have some of these paramaters:
+Select the call method. Methods will have some of these parameters:
 
 - `id` The identifier for the resource.
 A resource is the data identified by a unique id.
