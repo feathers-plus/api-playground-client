@@ -1,5 +1,7 @@
 # api-playground-client
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/feathersjs/api-playground-client.svg)](https://greenkeeper.io/)
+
 [![Dependency Status](https://img.shields.io/david/feathersjs/api-playground-client.svg?style=flat-square)](https://david-dm.org/feathersjs/api-playground-client)
 [![Download Status](https://img.shields.io/npm/dm/api-playground-client.svg?style=flat-square)](https://www.npmjs.com/package/api-playground-client)
 
